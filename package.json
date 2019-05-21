@@ -75,8 +75,11 @@
         "mocha": "^6.1.4",
         "phantomjs-prebuilt": "^2.1.16",
         "prettier": "^1.17.0",
+        "react-activity-feed": "^0.9.11",
         "react-hot-loader": "^4.8.4",
         "react-test-renderer": "^16.8.6",
-        "react-testing-library": "^7.0.0"
+        "react-testing-library": "^7.0.0",
+        "stream-chat": "^0.13.2",
+        "stream-chat-react": "^0.5.8"
     }
 }
