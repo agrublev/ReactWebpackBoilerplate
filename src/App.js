@@ -1,8 +1,9 @@
+import { hot } from "react-hot-loader/root";
 import React from "react";
-import logo from "./logo.svg";
 import "./App.less";
 import { observer } from "mobx-react";
 import { observable } from "mobx";
+import ComponentExample from "./ComponentExample";
 
 @observer
 class App extends React.Component {
@@ -17,23 +18,26 @@ class App extends React.Component {
                             this.tree = "dream" + Date.now();
                         }}
                     >
-                        DCCC
+                        Change Things
                     </button>
-                    <p>
-                        {this.tree} Edit <code>src/App.js</code> and save to reload.asdsadasdsd asd
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+                    <div>
+                        {this.tree} Edit <code>src/App.js</code> and save to reload.
+                        <p>
+                            <a
+                                className="App-link"
+                                href="https://reactjs.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Learn React
+                            </a>
+                        </p>
+                    </div>
                 </header>
+                <ComponentExample />
             </div>
         );
     }
 }
 
-export default App;
+export default hot(App);
