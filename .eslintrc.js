@@ -35,13 +35,13 @@ module.exports = {
 			}
 		],
 		"react/prop-types": "off",
-		complexity: ["warn", 5],
-		"max-nested-callbacks": ["warn", 8],
+		complexity: ["warn", 4],
+		"max-nested-callbacks": ["warn", 5],
 		"no-unused-vars": "warn",
 		"max-statements": [
 			"warn",
 			{
-				max: 4
+				max: 3
 			}
 		],
 		"max-statements-per-line": [
