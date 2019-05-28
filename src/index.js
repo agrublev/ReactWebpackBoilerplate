@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"+;
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+    console.warn("z",zesd);
 ReactDOM.render(<App />, document.getElementById('root'));
 
 if (module.hot) {
-    console.warn("z",zesd);
     module.hot.accept(); // already had this init code
 
     module.hot.addStatusHandler(status => {
