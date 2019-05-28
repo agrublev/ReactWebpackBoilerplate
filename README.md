@@ -1,5 +1,7 @@
 # Sexiest React Webpack Boilerplate 🙌 💅 🔨
 
+Enjoy ;)
+
 ## install
 
 ```bash
