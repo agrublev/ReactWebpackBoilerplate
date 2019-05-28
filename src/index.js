@@ -6,7 +6,7 @@ import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 if (module.hot) {
-    console.warn("z",ze);
+    console.warn("z",zesd);
     module.hot.accept(); // already had this init code
 
     module.hot.addStatusHandler(status => {
