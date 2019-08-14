@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 /** ADDING BAD CODE FOR TESTING */
 
-const treeA = 'Tesdt 53';
+const treeBBA = 'Tesdt 53' + "SADA" + 'SAD';
 const z = "TElll";
 
 const treeA = 'Tesdt 53';
-const z = "TElll";
+const z = "TEllZl";
 
 
 class ComponentExample extends Component {
