@@ -11,6 +11,7 @@ module.exports = {
 		"jsx": true
 	},
 	rules: {
+		"quotes":["error","double"],
 		"no-mixed-operators": ["off"],
 		"no-console": ["off"],
 		"react/jsx-indent": ["off"],
