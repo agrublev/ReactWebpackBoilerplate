@@ -5,6 +5,9 @@ import React, { Component } from "react";
 const treeA = 'Tesdt 53';
 const z = "TElll";
 
+const treeA = 'Tesdt 53';
+const z = "TElll";
+
 
 class ComponentExample extends Component {
 
