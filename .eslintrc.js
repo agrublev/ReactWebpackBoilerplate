@@ -53,5 +53,5 @@ module.exports = {
 		"getter-return": "warn",
 		"jsx-quotes": ["warn", "prefer-double"]
 	},
-	extends: ["prettier", "eslint:recommended"]
+	extends: ["eslint:recommended"]
 };
