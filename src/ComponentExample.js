@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+/** ADDING BAD CODE FOR TESTING */
+
+const treeA = 'Tesdt 53';
+const z = "TElll";
+
+
 class ComponentExample extends Component {
 
     render() {
