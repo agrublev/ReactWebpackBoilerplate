@@ -11,6 +11,7 @@ module.exports = {
 		"jsx": true
 	},
 	rules: {
+		"quotes":["error","double"],
 		"no-mixed-operators": ["off"],
 		"no-console": ["off"],
 		"react/jsx-indent": ["off"],
@@ -53,5 +54,5 @@ module.exports = {
 		"getter-return": "warn",
 		"jsx-quotes": ["warn", "prefer-double"]
 	},
-	extends: ["prettier", "eslint:recommended"]
+	extends: ["eslint:recommended"]
 };
