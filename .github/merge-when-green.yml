@@ -1,2 +1,2 @@
 requiredChecks:
-  - codebeat
+  - DeepScan
