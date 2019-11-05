@@ -1,0 +1,33 @@
+aliases:
+  # commands
+  - &yarn
+    name: Install Dependencies
+    command: |
+      yarn install
+  - &test
+    name: Run Tests
+    command: |
+      yarn test
+
+defaults: &defaults
+  environment:
+    CIRCLE: true
+  working_directory: ~/project
+  docker:
+    - image: circleci/node:lts
+
+version: 2.1
+
+jobs:
+  install_lint_test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: *yarn
+      - run: *test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install_lint_test
