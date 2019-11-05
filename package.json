@@ -5,7 +5,8 @@
     "scripts": {
         "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --profile --colors --inspect --config webpack.config.dev.js",
         "build": "NODE_ENV=production webpack  --colors  --progress --display-error-details --config ./webpack.config.js",
-        "deploy": "npx surge dist"
+        "deploy": "npx surge dist",
+        "test": "eslint ./packages --quiet"
     },
     "eslintConfig": {
         "extends": "react-app"
