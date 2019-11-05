@@ -1,6 +1,6 @@
 # Sexiest React Webpack Boilerplate 🙌 💅 🔨
 
-Enjoy ;)
+Enjoy ;) 
  
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/agrublev/ReactWebpackBoilerplate.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/agrublev/ReactWebpackBoilerplate/alerts/)
 
