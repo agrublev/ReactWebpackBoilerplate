@@ -5,6 +5,8 @@ import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
+// Thats cool
+
 if (module.hot) {
     module.hot.accept(); // already had this init code
 

@@ -1,4 +1,4 @@
-import { hot } from "react-hot-loader/root";
+import { hot } from "react-hot-loader";
 import React from "react";
 import "./App.less";
 import { observer } from "mobx-react";
