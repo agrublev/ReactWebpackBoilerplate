@@ -19,8 +19,6 @@ jobs:
         path: ${{ steps.yarn-cache.outputs.dir }}
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
           ${{ runner.os }}-yarn-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
