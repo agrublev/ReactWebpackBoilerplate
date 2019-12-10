@@ -7,7 +7,7 @@ import ComponentExample from "./ComponentExample";
 
 @observer
 class App extends React.Component {
-    @observable tree = "sex";
+    @observable tree =      'sex';
     render() {
         return (
             <div className="App">
