@@ -1,8 +1,5 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
-const store = {};
-const path = require("path");
-
 module.exports = {
     // setupFiles: ["<rootDir>/packages/tests/jest.setup.js"],
     // setupFilesAfterEnv: ["<rootDir>/packages/tests/rootSetup.js"],
