@@ -4,12 +4,9 @@ module.exports = {
     },
     env: {
         browser: true,
-        node: true,
         es6: true
     },
-    ecmaFeatures: {
-        jsx: true
-    },
+    parser: "babel-eslint",
     parserOptions: {
         ecmaVersion: 8,
         sourceType: "module",
@@ -42,12 +39,7 @@ module.exports = {
                 properties: "always"
             }
         ],
-        "react/jsx-one-expression-per-line": [
-            "warn",
-            {
-                allow: "none"
-            }
-        ],
+        "react/jsx-one-expression-per-line": ["off"],
         "react/prop-types": "off",
         complexity: ["warn", 4],
         "max-nested-callbacks": ["warn", 5],
@@ -66,6 +58,5 @@ module.exports = {
         ],
         "getter-return": "warn",
         "jsx-quotes": ["warn", "prefer-double"]
-    },
-    extends: ["eslint:recommended"]
+    }
 };
