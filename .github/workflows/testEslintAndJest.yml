@@ -1,4 +1,4 @@
-name: Test Eslint
+name: Test Eslint & Jest
 
 on: [push]
 
@@ -32,5 +32,6 @@ jobs:
       run: |
         yarn install
         yarn test:lint
+        yarn test
       env:
         CI: true
