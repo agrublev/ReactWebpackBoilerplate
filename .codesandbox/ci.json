@@ -1,8 +1,26 @@
 {
-  // You probably don't need to set anything in the configuration,
-  // we infer a lot of information from the repo. One value that's worth
-  // setting is your default sandbox ids to fork for a PR. It's easier to test
-  // on a sandbox that includes some test cases already.
-  // This is also optional, we default to 'vanilla' if it isn't set.
-  "sandboxes": ["new", "vanilla"]
+  // which script in package.json to run to install instead of `npm ci` or `yarn install`,
+  // can be `false` if you want to skip this step
+  "installCommand": "install",
+  // which script in package.json to run to build,
+  // can be `false` if you want to skip this step
+  "buildCommand": "build",
+  // if you have a monorepo, put the paths of the packages here. We'll infer the package names.
+  // globs are supported
+  "packages": ["packages/react", "packages/react-dom"],
+  // if you don't publish from the package directory, specify per dependency
+  // where the contents of the built dependency are. These files will be uploaded
+  // to our registry
+  "publishDirectory": {
+    "react": "build/node_modules/react",
+    "react-dom": "build/node_modules/react-dom"
+  },
+  // a list of sandboxes that you want generated for a PR, if this list
+  // is not set we will default to `vanilla`. The built library will automatically
+  // be installed in the fork of these sandboxes in the place of the library. So if
+  // you have a sandbox with `lodash`, and you built `lodash` and `vue`, we will only
+  // replace `lodash` with the built version.
+  // You can also set absolute paths to a directory in your repository. We will make sure
+  // to generate a sandbox from the contents of that directory.
+  "sandboxes": [ "new"]//, "/examples/todomvc"
 }
