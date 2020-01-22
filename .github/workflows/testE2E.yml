@@ -33,9 +33,9 @@ jobs:
   run-firefox:
     name: every OS ff
     runs-on: ubuntu-16.04
+    container: cypress/browsers:node12.13.0-chrome78-ff70
       # Cypress Docker image with Chrome v78
       # and Firefox v70 pre-installed
-      container: cypress/browsers:node12.13.0-chrome78-ff70
 #    strategy:
 #      matrix:
 #        # run 2 copies of the current job in parallel
