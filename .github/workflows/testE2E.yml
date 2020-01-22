@@ -7,7 +7,7 @@ jobs:
       matrix:
         # run 2 copies of the current job in parallel
         # and they will load balance all specs
-        os: ['windows-latest', 'macos-latest']
+        os: ['macos-latest']#'windows-latest'
         machines: [1]
     runs-on: ${{ matrix.os }}
     steps:
@@ -23,6 +23,37 @@ jobs:
           record: true
           parallel: true
           group: Parallel 2x on ${{ matrix.os }}
+          # on Mac and Linux we can use "npm start"
+          start: yarn t
+          # but for this particular project on Windows we need a different start command
+#          start-windows: npm run start:ci:windows
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: "0993effe-ab74-442e-97a0-99d15dbfd6b4"
+  run-firefox:
+    name: every OS
+    strategy:
+      matrix:
+        # run 2 copies of the current job in parallel
+        # and they will load balance all specs
+        os: ['macos-latest']
+        machines: [1]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      # because of "record" and "parallel" parameters
+      # these containers will load balance all found tests among themselves
+      - name: run tests
+        uses: cypress-io/github-action@v1
+        timeout-minutes: 10
+
+        with:
+          browser: firefox
+          record: true
+          parallel: true
+          group: Parallel 2x ff on ${{ matrix.os }}
           # on Mac and Linux we can use "npm start"
           start: yarn t
           # but for this particular project on Windows we need a different start command
