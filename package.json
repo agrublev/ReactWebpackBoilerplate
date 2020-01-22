@@ -6,7 +6,9 @@
         "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --profile --colors --inspect --config webpack.config.dev.js",
         "build": "NODE_ENV=production webpack  --colors  --progress --display-error-details --config ./webpack.config.js",
         "deploy": "npx surge dist",
-        "t": "run-p start tt",
+        "t": "run-s build ts",
+        "ts": "run-p ss tt",
+        "ss": "http-server dist -p 3000",
         "tt": "cypress run --record --key 0993effe-ab74-442e-97a0-99d15dbfd6b4 --spec \"cypress/integration/examples/actions.spec.js\"",
         "test": "cross-env NODE_ENV=test jest --config jest.config.js --runInBand --forceExit --detectOpenHandles",
         "test:lint": "eslint ./src --quiet"
@@ -67,6 +69,7 @@
         "extract-text-webpack-plugin": "^3.0.2",
         "file-loader": "^5.0.2",
         "html-webpack-plugin": "^3.2.0",
+        "http-server": "^0.12.1",
         "jest": "^24.9.0",
         "jest-github-reporter": "^0.3.4",
         "jest-junit": "^10.0.0",
