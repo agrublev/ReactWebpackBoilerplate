@@ -31,7 +31,7 @@ jobs:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: "0993effe-ab74-442e-97a0-99d15dbfd6b4"
   run-firefox:
-    name: every OS
+    name: every OS ff
     strategy:
       matrix:
         # run 2 copies of the current job in parallel
