@@ -21,7 +21,7 @@ class App extends React.Component {
                         Change Things
                     </button>
                     <div>
-                        {this.tree} Edit <code>src/App.js</code> and save to reload.
+                        <span id={"RAND"}>{this.tree}</span> Edit <code>src/App.js</code> and save to reload.
                         <p>
                             <a
                                 className="App-link"
